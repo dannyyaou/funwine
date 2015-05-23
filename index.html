@@ -1,0 +1,144 @@
+<!Doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fun New Wine</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	<script src="angular-1.3.15.min.js"></script>
+	<script src="jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="appforfront.js"></script>
+</head>
+<body ng-app="NCCUeat" ng-controller="gameController" ng-init="init()">
+
+	<!-- gamepage -->
+	<nav class="top_nav">
+		<div class="logo" ng-click="getRidShow()">
+			<img src="img/logo.png">
+		</div>
+		<div class="search">
+			<input type="input" placeholder="搜尋紅酒或餐點" ng-focus="searchFocus()">
+		</div>
+		<div class="photo">
+			<img src="img/ic2-01.png">
+		</div>
+
+	</nav>
+	<nav class="down_nav">
+		<ul class="down_nav_ul">
+			<li class="down_nav_li"><a href="#"><img class="page1icon activeNavIcon" src="img/icon1-a.png" ng-click="changePage(1,$event)"></a></li>
+			<li class="down_nav_li"><a href="#"><img class="page2icon" src="img/icon2.png" ng-click="changePage(2,$event)"></a></li>
+			<li class="down_nav_li"><a href="#"><img class="page3icon" src="img/icon3.png" ng-click="changePage(3,$event)"></a></li>
+			<li class="down_nav_li"><a href="#"><img class="page4icon" src="img/icon4.png" ng-click="changePage(4,$event)"></a></li>
+		</ul>
+	</nav>
+	<!-- searchdiv -->
+	<div class="searchdiv" ng-show="ngshow.searchDivShow">
+		<div class="closeButton">
+			<button ng-click="searchDivHide()">X</button>
+		</div>
+		<div class="searchHeadline">
+			<h3>搜尋結果</h3>
+		</div>
+	</div>
+
+
+	<!-- page -->
+	<div class="page1 page showpage">
+		<!-- first page -->
+		<a href="#">
+			<div class="wineIntro wineIntro1"style="background:url('img/wine/wine1.jpg');background-size: cover;">
+				<p>加拿大浣熊紅酒{{wineid}}</p>
+			</div>
+		</a>
+		<a href="#">
+			<div class="wineIntro wineIntro2"style="background:url('img/wine/wine2.jpg');background-size: cover;">
+				<p>加拿大浣熊紅酒</p>
+			</div>
+		</a>
+		<a href="#">
+			<div class="wineIntro wineIntro2"style="background:url('img/wine/wine3.jpg');background-size: cover;">
+				<p>加拿大浣熊紅酒</p>
+			</div>
+		</a>
+		<a href="#">
+			<div class="wineIntro wineIntro1"style="background:url('img/wine/wine4.jpg');background-size: cover;">
+				<p>加拿大浣熊紅酒</p>
+			</div>
+		</a>
+	</div>
+	<div class="page page2">
+		<h1 style="color:white">我是配餐功能頁</h1>
+	</div>
+	<div class="page page3">
+		<h1 style="color:white">我是LBS功能頁</h1>
+	</div>
+	<div class="page page4">
+		<div class="userInfo">
+			<img src="img/people/2.png" class="profile">
+			<h1 style="color:white">王美麗</h1>
+			<button class="active">推薦你的紅酒</button>
+			<button>你評價過的紅酒</button>
+		</div>
+		<div class="userSuggestion">
+			<a href="#">
+				<div class="wineIntro wineIntro1"style="background:url('img/wine/wine1.jpg');background-size: cover;">
+					<p>加拿大浣熊紅酒{{wineid}}</p>
+				</div>
+			</a>
+			<a href="#">
+				<div class="wineIntro wineIntro2"style="background:url('img/wine/wine2.jpg');background-size: cover;">
+					<p>加拿大浣熊紅酒</p>
+				</div>
+			</a>
+			<a href="#">
+				<div class="wineIntro wineIntro2"style="background:url('img/wine/wine3.jpg');background-size: cover;">
+					<p>加拿大浣熊紅酒</p>
+				</div>
+			</a>
+			<a href="#">
+				<div class="wineIntro wineIntro1"style="background:url('img/wine/wine4.jpg');background-size: cover;">
+					<p>加拿大浣熊紅酒</p>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+
+	<!-- wine info page -->
+	<div class="wineInfoPage searchDiv" ng-show = "ngshow.wineInfoShow">
+		<h3>梅洛(Merlot)</h3>
+		<div class="wineInfoPage_block1">
+			<div class="closeButton">
+				<button ng-click="getRidShow()" style="top:-40px">X</button>
+			</div>
+			<div class="wineInfoPage_block1_img">
+				<img src="img/wine/wine2.jpg">
+			</div>
+			<div class="wineInfoPage_block1_like">
+				愛心40
+			</div>
+		</div>
+		<div class="wineInfoPage_block2">
+			<p>要怎麼形容梅洛呢？如果說要找「丟上月球也能種的紅葡萄」，十個釀酒師有九個會說梅洛（白葡萄則是夏多內）。好生長的梅洛雖然原生於法國，但由於其不需太久就能熟成的特性，讓她的追隨者一路從法國到義大利，又延伸到美國、智利這些美洲國家。再加上梅洛葡萄的皮不厚，果肉飽滿，容易成熟，完全符合所謂好吃葡萄的定義，釀出來的酒自然是適合品酒新手的口味 – 想想看一杯巨峰葡萄釀成的超級葡萄汁加上黑莓、紅梅的濃郁香氣，還有柔順不澀的口感，也難怪梅洛有著「大眾情人」的稱號了！</p>
+		</div>
+		<hr>
+		<div class="wineInfoPage_block3">
+			<div class="wineInfoPage_block3_comment">
+				<h3>大家的評論</h3>
+				<img src="img/people/2.png">
+				<p>林美麗：我的特別棒欸！真der！</p>
+			</div>
+			<hr>
+			<div class="wineInfoPage_block3_commentInput">
+				<input type="text" placeholder="我也要評論">
+				<button>送出</button>
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+</html>

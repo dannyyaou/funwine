@@ -1,0 +1,256 @@
+/*重定義*/
+body{
+	background-color: rgba(0,0,0,.9);
+	color: white;
+}
+img{
+	max-width: 100%;
+}
+
+/*素材*/
+.closeButton{
+	float: right;
+	button{
+		position: relative;
+	  top: 10px;
+	  right: 10px;
+	  border: 0;
+	  color: rgb(136, 133, 133);
+	  width: 30px;
+	  height: 30px;
+	}
+}
+.page{
+	position: relative;
+	top: 95px;
+	width: 100%;
+	left: 0;
+	display: none;
+}
+.showpage{
+	display: block;
+}
+.wineIntro{
+	height: 200px;
+	position: relative;
+	p{
+		color: black;
+	  position: absolute;
+	  bottom: 0;
+	  background: rgba(255,255,255,.9);
+	  padding: 7px;
+	  padding-right: 20px;
+	  border-radius: 1px;
+	}
+}
+.wineIntro1{
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 5%;
+}
+.wineIntro2{
+	display: inline-block;
+	width: 43%;
+	margin-left: 5%;
+	margin-right: -3%;
+	margin-top: 5%;
+}
+
+
+/*結構內東東*/
+
+
+.top_nav{
+	::-webkit-input-placeholder { /* WebKit browsers */
+    color: rgba(255,255,255,.8);
+    padding-left: 10px;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	    color: rgba(255,255,255,.8);
+	    padding-left: 10px;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+	    color: rgba(255,255,255,.8);
+	    padding-left: 10px;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10+ */
+	    color: rgba(255,255,255,.8);
+	    padding-left: 10px;
+	}
+	position: fixed;
+	top: 0;
+	width: 100%;
+	left: 0;
+	background-color: #9f2223;
+	height: 50px;
+	line-height: 32px;
+	z-index: 1000;
+	div{
+		display: inline-block;
+	}
+	.logo{
+		width: 13%;
+		top: 0px;
+		img{
+			max-width: 100%;
+			position: relative;
+			left: 5px;
+		}
+	}
+	.photo{
+		width: 13%;
+		top: 0px;
+		position: relative;
+		left: 4%;
+		img{
+			max-width: 80%;
+			position: relative;
+			left: 5px;
+		}
+	}
+	.search{
+		width: 65%;
+	  position: relative;
+	  background: rgba(255,255,255,.4);
+	  top: 3px;
+	  border-radius: 10px;
+  	left: 2.5%;
+	  input{
+	  	background: rgba(0,0,0,0);
+  		border: 0;
+  		width: 100%;
+	  }
+	}
+}
+
+.down_nav{
+	position: fixed;
+  top: 50px;
+  width: 100%;
+  height: 45px;
+  left: 0;
+  background-color: rgba(255,255,255,.90);
+  z-index: 12;
+  .down_nav_ul{
+  	margin: 0;
+  	padding: 0;
+  	text-align: center;
+  	line-height: 45px;
+  	.down_nav_li{
+  		display: inline-block;
+		  width: 24%;
+		  padding: 0;
+		  margin: 0;
+		  img{
+		  	max-width: 30%;
+		  }
+  	}
+  }
+}
+/*search*/
+.searchdiv{
+	background-color: white;
+	position: fixed;
+	margin-top: 50px;
+	width: 100%;
+	height:2000px;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	.searchHeadline{
+		h3{
+			margin: 0;
+			margin-top: 12px;
+		}
+	}
+}
+/*page*/
+.page1{
+
+}
+.page4{
+	.userInfo{
+		text-align: center;
+		img.profile{
+			width: 50%;
+			margin-top: 20px;
+		}
+		button{
+		  color: white;
+		  width: 41%;
+		  background-color: rgb(63, 63, 63);
+		  border: 0;
+		  height: 42px;
+		  margin: 0 5px;
+		}
+		button.active{
+			background-color: rgb(159, 34, 35);
+		}
+	}
+}
+/*wine info page*/
+
+.wineInfoPage{
+	z-index: 500;
+  height: 2000px;
+  background: white;
+  color: black;
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  &_block1{
+  	div{
+  		display: inline-block;
+  	}
+  	h1{
+  	}
+  	&_img{
+  		width: 70%;
+  		padding: 2%;
+  		height: 250px;
+  		overflow: hidden;
+  		img{
+  			max-width: 100%;
+  		}
+  	}
+  	&_like{
+  		width: 15%;
+  		bottom: 125px;
+  		position: relative;
+  	}
+  }
+  &_block2{
+
+  }
+  &_block3{
+  	&_comment{
+  		text-align: center;
+  		img{
+  			width: 15%;
+  			display: inline-block;
+  			margin-left: 15px;
+  		}
+  		p{
+  			display: inline;
+			  margin: 15px;
+			  font-size: 15px;
+  		}
+  	}
+  	&_commentInput{
+  		input{
+			  width: 80%;
+			  border: 1px solid black;
+			  height: 40px;
+			  margin-left: 10px;
+  		}
+  		button{
+  			height: 40px;
+			  border: 0;
+			  color: white;
+			  background: rgb(159, 34, 35);
+			  border-radius: 10px;
+  		}
+  	}
+  }
+
+}
