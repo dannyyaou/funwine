@@ -4,8 +4,8 @@
 
 /*重定義*/
 body{
-	background-color: rgba(0,0,0,.9);
-	color: white;
+	background-color: white;
+	color: black;
 }
 img{
 	max-width: 100%;
@@ -26,10 +26,11 @@ img{
 }
 .page{
 	position: relative;
-	top: 95px;
+	top: 50px;
 	width: 100%;
 	left: 0;
 	display: none;
+	margin-bottom: 50px;
 }
 .showpage{
 	display: block;
@@ -38,13 +39,22 @@ img{
 	height: 200px;
 	position: relative;
 	p{
-		color: black;
-	  position: absolute;
+	  color: white;
+ 		position: absolute;
 	  bottom: 0;
-	  background: rgba(255,255,255,.9);
-	  padding: 7px;
+	  background: rgba(0, 0, 0, 0.9);
+	  padding: 15px;
 	  padding-right: 20px;
 	  border-radius: 1px;
+	  width: 100%;
+	  margin: 0;
+	  font-size: 8px;
+	}
+	img{
+		position: absolute;
+	  bottom: 6px;
+	  width: 40px;
+	  right: 10px;
 	}
 }
 .wineIntro1{
@@ -129,11 +139,11 @@ img{
 
 .down_nav{
 	position: fixed;
-  top: 50px;
+  bottom: 0;
   width: 100%;
   height: 45px;
   left: 0;
-  background-color: rgba(255,255,255,.90);
+  background-color: rgba(24,24,24,.90);
   z-index: 12;
   .down_nav_ul{
   	margin: 0;
@@ -141,10 +151,10 @@ img{
   	text-align: center;
   	line-height: 45px;
   	.down_nav_li{
-  		display: inline-block;
-		  width: 24%;
-		  padding: 0;
-		  margin: 0;
+			display: inline-block;
+ 			width: 30%;
+  		padding: 0;
+  		margin: 0;
 		  img{
 		  	max-width: 30%;
 		  }
@@ -207,13 +217,47 @@ img{
 /*wine info page*/
 
 .wineInfoPage{
-	z-index: 500;
+	z-index: 10;
   height: 2000px;
   background: white;
   color: black;
   position: absolute;
   top: 50px;
   width: 100%;
+  .picBlock{
+	  text-align: center;
+	  width: 74%;
+	  height: 250px;
+	  margin-left: 13%;
+	  margin-top: 5%;
+	  margin-bottom: 5%;
+	  box-shadow: 5px 3px 11px rgba(0, 0, 0, 0.6);
+	  position: relative;
+  	p.point{
+		  position: absolute;
+		  top: 0;
+		  color: rgb(207, 19, 19);
+		  font-size: 24px;
+		  margin: 4px 10px;
+  	}
+  	p.like{
+  		position: absolute;
+		  bottom: 0;
+		  right: 0;
+		  color: rgb(207, 19, 19);
+		  font-size: 24px;
+		  margin: 4px 10px;
+  	}
+  	p.price{
+		  position: absolute;
+		  bottom: 0;
+		  left: 0;
+		  color: #4A4A4A;
+		  font-size: 14px;
+		  margin: 4px 10px;
+		  font-weight: 600;
+  	}
+  }
   &_block1{
   	div{
   		display: inline-block;
