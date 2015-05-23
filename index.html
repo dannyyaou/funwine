@@ -48,28 +48,37 @@
 	<div class="page1 page showpage">
 		<!-- first page -->
 		<a href="#">
-			<div class="wineIntro wineIntro1"style="background:url('img/wine/wine1.jpg');background-size: cover;">
+			<div class="wineIntro wineIntro1"style="background:url('img/wine/wine1.jpg');background-size: cover;" ng-click="showWineInfo($event, wineid)">
 				<p>加拿大浣熊紅酒{{wineid}}</p>
 			</div>
 		</a>
 		<a href="#">
-			<div class="wineIntro wineIntro2"style="background:url('img/wine/wine2.jpg');background-size: cover;">
+			<div class="wineIntro wineIntro2"style="background:url('img/wine/wine2.jpg');background-size: cover;" ng-click="showWineInfo($event, wineid)">
 				<p>加拿大浣熊紅酒</p>
 			</div>
 		</a>
 		<a href="#">
-			<div class="wineIntro wineIntro2"style="background:url('img/wine/wine3.jpg');background-size: cover;">
+			<div class="wineIntro wineIntro2"style="background:url('img/wine/wine3.jpg');background-size: cover;" ng-click="showWineInfo($event, wineid)">
 				<p>加拿大浣熊紅酒</p>
 			</div>
 		</a>
 		<a href="#">
-			<div class="wineIntro wineIntro1"style="background:url('img/wine/wine4.jpg');background-size: cover;">
+			<div class="wineIntro wineIntro1"style="background:url('img/wine/wine4.jpg');background-size: cover;" ng-click="showWineInfo($event, wineid)">
 				<p>加拿大浣熊紅酒</p>
 			</div>
 		</a>
 	</div>
 	<div class="page page2">
-		<h1 style="color:white">我是配餐功能頁</h1>
+		<div class="page2_block1">
+			<img src="img/food/{{currfood.id}}.jpg" class="foodChooseImage">
+		</div>
+		<div class="page2_block2">
+			<h1>你要吃{{currfood.name}}嗎？</h1>
+		</div>
+		<div class="page2_block3">
+			<div class="chooseBtn"><img src="img/yes.png"></div>
+			<div class="chooseBtn" ng-click="changeChooseFood()"><img src="img/no.png"></div>
+		</div>
 	</div>
 	<div class="page page3">
 		<h1 style="color:white">我是LBS功能頁</h1>
@@ -78,27 +87,44 @@
 		<div class="userInfo">
 			<img src="img/people/2.png" class="profile">
 			<h1 style="color:white">王美麗</h1>
-			<button class="active">推薦你的紅酒</button>
-			<button>你評價過的紅酒</button>
+			<button class="active seg_wine_btn" ng-click="changeProProduct('s')">推薦你的紅酒</button>
+			<button class="history_wine_btn" ng-click="changeProProduct('h')">你評價過的紅酒</button>
 		</div>
-		<div class="userSuggestion">
+		<div class="userSuggestion" ng-show="userSuggestion">
 			<a href="#">
-				<div class="wineIntro wineIntro1"style="background:url('img/wine/wine1.jpg');background-size: cover;">
+				<div class="wineIntro wineIntro1"style="background:url('img/wine/wine1.jpg');background-size: cover;" ng-click="showWineInfo($event, wineid)">
 					<p>加拿大浣熊紅酒{{wineid}}</p>
 				</div>
 			</a>
 			<a href="#">
-				<div class="wineIntro wineIntro2"style="background:url('img/wine/wine2.jpg');background-size: cover;">
+				<div class="wineIntro wineIntro2"style="background:url('img/wine/wine2.jpg');background-size: cover;" ng-click="showWineInfo($event, wineid)">
 					<p>加拿大浣熊紅酒</p>
 				</div>
 			</a>
 			<a href="#">
-				<div class="wineIntro wineIntro2"style="background:url('img/wine/wine3.jpg');background-size: cover;">
+				<div class="wineIntro wineIntro2"style="background:url('img/wine/wine3.jpg');background-size: cover;" ng-click="showWineInfo($event, wineid)">
 					<p>加拿大浣熊紅酒</p>
 				</div>
 			</a>
 			<a href="#">
-				<div class="wineIntro wineIntro1"style="background:url('img/wine/wine4.jpg');background-size: cover;">
+				<div class="wineIntro wineIntro1"style="background:url('img/wine/wine4.jpg');background-size: cover;" ng-click="showWineInfo($event, wineid)">
+					<p>加拿大浣熊紅酒</p>
+				</div>
+			</a>
+		</div>
+		<div class="userHistory" ng-show="!userSuggestion">
+			<a href="#">
+				<div class="wineIntro wineIntro2"style="background:url('img/wine/wine2.jpg');background-size: cover;" ng-click="showWineInfo($event, wineid)">
+					<p>加拿大浣熊紅酒</p>
+				</div>
+			</a>
+			<a href="#">
+				<div class="wineIntro wineIntro2"style="background:url('img/wine/wine3.jpg');background-size: cover;" ng-click="showWineInfo($event, wineid)">
+					<p>加拿大浣熊紅酒</p>
+				</div>
+			</a>
+			<a href="#">
+				<div class="wineIntro wineIntro1"style="background:url('img/wine/wine4.jpg');background-size: cover;" ng-click="showWineInfo($event, wineid)">
 					<p>加拿大浣熊紅酒</p>
 				</div>
 			</a>

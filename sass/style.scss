@@ -1,3 +1,7 @@
+
+
+
+
 /*重定義*/
 body{
 	background-color: rgba(0,0,0,.9);
@@ -167,6 +171,18 @@ img{
 /*page*/
 .page1{
 
+}
+.page2{
+	text-align: center;
+	img.foodChooseImage{
+		max-width: 60%;
+  	margin: 40px 0 20px 0;
+	}
+	.chooseBtn{
+		display: inline-block;
+		margin: 30px 10px;
+
+	}
 }
 .page4{
 	.userInfo{
