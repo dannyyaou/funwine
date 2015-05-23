@@ -102,7 +102,12 @@ NCCUeat.controller('gameController', function($scope, $http){
 		$scope.ngshow.wineInfoShow = true ;
 	}
 
-
+	$scope.testhttp = function(url){
+		$http.get(url)
+    .success(function(response) {
+      console.log(response);
+    });
+	}
 
 
 
