@@ -1,7 +1,15 @@
 var NCCUeat = angular.module('NCCUeat', []);
 
 NCCUeat.controller('gameController', function($scope, $http){
- 	
+	$scope.http = function(url){
+		$http.get(url)
+    .success(function(response) {
+      return response;
+    });
+	}
+
+ 	$scope.okItem = [{name:'貴族世家',address:'新北市土城區學府路一段'}, {name:'貴族世家家星勝',address:'台北市文山區指南路二段64號'}];
+ 	$scope.okItembay = [];
  	function randOrd(){
 		return (Math.round(Math.random())-0.5); 
 	}
@@ -11,8 +19,10 @@ NCCUeat.controller('gameController', function($scope, $http){
 	$scope.init = function() {
 		$scope.ngshow = {
 			searchDivShow : false,
-			wineInfoShow : false
+			wineInfoShow : false,
+			bigpageshow: false
 		};
+		$scope.myPlace = "台灣大學";
 		$scope.searchDivShow = false; 
 		$scope.userSuggestion = true;
 		$scope.foodList = $scope.foodList.sort(randOrd);
@@ -22,7 +32,8 @@ NCCUeat.controller('gameController', function($scope, $http){
 	$scope.getRidShow = function(){
 		$scope.ngshow = {
 			searchDivShow : false,
-			wineInfoShow : false
+			wineInfoShow : false,
+			bigpageshow: false
 		};
 	}
 
@@ -92,6 +103,13 @@ NCCUeat.controller('gameController', function($scope, $http){
 		point: 9.8,
 		price: 1380,
 		year: 1980,
+		non: '20%',
+		master: 'Rosa JJ',
+		ju: '姚哥酒莊',
+		liaun: '500cc',
+		lia: '小麥,大賣',
+		color: 'green',
+		sweet:'不甜'
 	}
 
 	//allItemForSearch
@@ -102,12 +120,66 @@ NCCUeat.controller('gameController', function($scope, $http){
 		$scope.ngshow.wineInfoShow = true ;
 	}
 
-	$scope.testhttp = function(url){
-		$http.get(url)
-    .success(function(response) {
-      console.log(response);
-    });
+		$scope.toRadians = function(degree) {
+    	return degree * Math.PI /180 ;  
+ 		};
+    $scope.getDistanceOf = function(latitude1,longitude1,latitude2,longitude2) {
+		  var R=6371;
+    	var deltalatitude = $scope.toRadians(latitude2-latitude1);
+    	var detalongitude = $scope.toRadians(longitude2-longitude1);
+    	latitude1 = $scope.toRadians(latitude2);
+    	var a = Math.sin(deltalatitude/2) * Math.sin(deltalatitude/2) + Math.cos(latitude1) * Math.cos(latitude2) * Math.sin(detalongitude/2) * Math.sin(detalongitude/2);
+    	var c = 2 * Math.atan(Math.sqrt(a),Math.sqrt(1-a));
+    	var d = R * c;
+    	return d;
+		};
+		 $scope.getDistance = function(addressA,addressB,stuff){
+	              var geocoder = new google.maps.Geocoder();
+	              var addressAp = {};
+	              var addressBp = {};
+                geocoder.geocode({
+                    "address": addressA
+                }, function (results, status) {
+					
+                    if (status == google.maps.GeocoderStatus.OK) {
+                    	addressAp.a = results[0].geometry.location.A;
+                    	addressAp.b = results[0].geometry.location.F;
+                    } else {
+											console.log('something went wrong!');
+                    }
+                });
+                geocoder.geocode({
+                    "address": addressB
+                }, function (results, status) {
+					
+                    if (status == google.maps.GeocoderStatus.OK) {
+                    	addressBp.a = results[0].geometry.location.A;
+                    	addressBp.b = results[0].geometry.location.F;
+                			var distance = new GLatLng(addressAp.a, addressAp.b).distanceFrom(new GLatLng(addressBp.a,addressBp.b));  
+  		  							var dis = parseInt(distance/1000,10);
+  		  							if (dis<10) {
+  		  								$scope.okItembay.push(stuff);
+  		  								console.log($scope.okItembay);
+  		  							};
+                    } else {
+											console.log('something went wrong!');
+                    }
+                });
+    }
+
+	$scope.goBuy = function(){
+		// var res = $scope.http(url);
+		// $scope.okItem = [];
+		// $scope.okItembay = [];
+		res = [{name:'貴族世家',address:'新北市土城區學府路一段'}, {name:'貴族世家家星勝',address:'台北市文山區指南路二段64號'}];
+		for (var i = 0; i < res.length; i++) {
+    	$scope.getDistance($scope.myPlace,res[i].address,res[i]);
+    };
+    setTimeout(function(){$scope.okItem = $scope.okItembay;console.log($scope.okItem);},2000);
+    $scope.ngshow.bigpageshow = true;
 	}
+
+
 
 
 

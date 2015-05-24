@@ -34,6 +34,7 @@ img{
 }
 .showpage{
 	display: block;
+	margin-bottom: 50px;
 }
 .wineIntro{
 	height: 200px;
@@ -313,4 +314,10 @@ img{
   	}
   }
 
+}
+
+
+
+.BigPage{
+	z-index: 1000000;
 }

@@ -40,14 +40,15 @@ img {
 /* line 35, ../sass/style.scss */
 .showpage {
   display: block;
+  margin-bottom: 50px;
 }
 
-/* line 38, ../sass/style.scss */
+/* line 39, ../sass/style.scss */
 .wineIntro {
   height: 200px;
   position: relative;
 }
-/* line 41, ../sass/style.scss */
+/* line 42, ../sass/style.scss */
 .wineIntro p {
   color: white;
   position: absolute;
@@ -60,7 +61,7 @@ img {
   margin: 0;
   font-size: 8px;
 }
-/* line 53, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 .wineIntro img {
   position: absolute;
   bottom: 6px;
@@ -68,14 +69,14 @@ img {
   right: 10px;
 }
 
-/* line 60, ../sass/style.scss */
+/* line 61, ../sass/style.scss */
 .wineIntro1 {
   width: 90%;
   margin-left: 5%;
   margin-top: 5%;
 }
 
-/* line 65, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 .wineIntro2 {
   display: inline-block;
   width: 43%;
@@ -85,7 +86,7 @@ img {
 }
 
 /*結構內東東*/
-/* line 77, ../sass/style.scss */
+/* line 78, ../sass/style.scss */
 .top_nav {
   position: fixed;
   top: 0;
@@ -96,59 +97,59 @@ img {
   line-height: 32px;
   z-index: 1000;
 }
-/* line 78, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 .top_nav ::-webkit-input-placeholder {
   /* WebKit browsers */
   color: rgba(255, 255, 255, 0.8);
   padding-left: 10px;
 }
-/* line 82, ../sass/style.scss */
+/* line 83, ../sass/style.scss */
 .top_nav :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: rgba(255, 255, 255, 0.8);
   padding-left: 10px;
 }
-/* line 86, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 .top_nav ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: rgba(255, 255, 255, 0.8);
   padding-left: 10px;
 }
-/* line 90, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 .top_nav :-ms-input-placeholder {
   /* Internet Explorer 10+ */
   color: rgba(255, 255, 255, 0.8);
   padding-left: 10px;
 }
-/* line 102, ../sass/style.scss */
+/* line 103, ../sass/style.scss */
 .top_nav div {
   display: inline-block;
 }
-/* line 105, ../sass/style.scss */
+/* line 106, ../sass/style.scss */
 .top_nav .logo {
   width: 13%;
   top: 0px;
 }
-/* line 108, ../sass/style.scss */
+/* line 109, ../sass/style.scss */
 .top_nav .logo img {
   max-width: 100%;
   position: relative;
   left: 5px;
 }
-/* line 114, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
 .top_nav .photo {
   width: 13%;
   top: 0px;
   position: relative;
   left: 4%;
 }
-/* line 119, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 .top_nav .photo img {
   max-width: 80%;
   position: relative;
   left: 5px;
 }
-/* line 125, ../sass/style.scss */
+/* line 126, ../sass/style.scss */
 .top_nav .search {
   width: 65%;
   position: relative;
@@ -157,14 +158,14 @@ img {
   border-radius: 10px;
   left: 2.5%;
 }
-/* line 132, ../sass/style.scss */
+/* line 133, ../sass/style.scss */
 .top_nav .search input {
   background: transparent;
   border: 0;
   width: 100%;
 }
 
-/* line 140, ../sass/style.scss */
+/* line 141, ../sass/style.scss */
 .down_nav {
   position: fixed;
   bottom: 0;
@@ -174,27 +175,27 @@ img {
   background-color: rgba(24, 24, 24, 0.9);
   z-index: 12;
 }
-/* line 148, ../sass/style.scss */
+/* line 149, ../sass/style.scss */
 .down_nav .down_nav_ul {
   margin: 0;
   padding: 0;
   text-align: center;
   line-height: 45px;
 }
-/* line 153, ../sass/style.scss */
+/* line 154, ../sass/style.scss */
 .down_nav .down_nav_ul .down_nav_li {
   display: inline-block;
   width: 30%;
   padding: 0;
   margin: 0;
 }
-/* line 158, ../sass/style.scss */
+/* line 159, ../sass/style.scss */
 .down_nav .down_nav_ul .down_nav_li img {
   max-width: 30%;
 }
 
 /*search*/
-/* line 165, ../sass/style.scss */
+/* line 166, ../sass/style.scss */
 .searchdiv {
   background-color: white;
   position: fixed;
@@ -205,39 +206,38 @@ img {
   left: 0;
   z-index: 100;
 }
-/* line 175, ../sass/style.scss */
+/* line 176, ../sass/style.scss */
 .searchdiv .searchHeadline h3 {
   margin: 0;
   margin-top: 12px;
 }
 
 /*page*/
-/* line 185, ../sass/style.scss */
+/* line 186, ../sass/style.scss */
 .page2 {
   text-align: center;
 }
-/* line 187, ../sass/style.scss */
+/* line 188, ../sass/style.scss */
 .page2 img.foodChooseImage {
   max-width: 60%;
   margin: 40px 0 20px 0;
-  max-height: 200px;
 }
-/* line 191, ../sass/style.scss */
+/* line 192, ../sass/style.scss */
 .page2 .chooseBtn {
   display: inline-block;
   margin: 30px 10px;
 }
 
-/* line 198, ../sass/style.scss */
+/* line 199, ../sass/style.scss */
 .page4 .userInfo {
   text-align: center;
 }
-/* line 200, ../sass/style.scss */
+/* line 201, ../sass/style.scss */
 .page4 .userInfo img.profile {
   width: 50%;
   margin-top: 20px;
 }
-/* line 204, ../sass/style.scss */
+/* line 205, ../sass/style.scss */
 .page4 .userInfo button {
   color: white;
   width: 41%;
@@ -246,13 +246,13 @@ img {
   height: 42px;
   margin: 0 5px;
 }
-/* line 212, ../sass/style.scss */
+/* line 213, ../sass/style.scss */
 .page4 .userInfo button.active {
   background-color: #9f2223;
 }
 
 /*wine info page*/
-/* line 219, ../sass/style.scss */
+/* line 220, ../sass/style.scss */
 .wineInfoPage {
   z-index: 10;
   height: 2000px;
@@ -262,7 +262,7 @@ img {
   top: 50px;
   width: 100%;
 }
-/* line 227, ../sass/style.scss */
+/* line 228, ../sass/style.scss */
 .wineInfoPage .picBlock {
   text-align: center;
   width: 74%;
@@ -273,7 +273,7 @@ img {
   box-shadow: 5px 3px 11px rgba(0, 0, 0, 0.6);
   position: relative;
 }
-/* line 236, ../sass/style.scss */
+/* line 237, ../sass/style.scss */
 .wineInfoPage .picBlock p.point {
   position: absolute;
   top: 0;
@@ -281,7 +281,7 @@ img {
   font-size: 24px;
   margin: 4px 10px;
 }
-/* line 243, ../sass/style.scss */
+/* line 244, ../sass/style.scss */
 .wineInfoPage .picBlock p.like {
   position: absolute;
   bottom: 0;
@@ -290,7 +290,7 @@ img {
   font-size: 24px;
   margin: 4px 10px;
 }
-/* line 251, ../sass/style.scss */
+/* line 252, ../sass/style.scss */
 .wineInfoPage .picBlock p.price {
   position: absolute;
   bottom: 0;
@@ -300,55 +300,60 @@ img {
   margin: 4px 10px;
   font-weight: 600;
 }
-/* line 262, ../sass/style.scss */
+/* line 263, ../sass/style.scss */
 .wineInfoPage_block1 div {
   display: inline-block;
 }
-/* line 267, ../sass/style.scss */
+/* line 268, ../sass/style.scss */
 .wineInfoPage_block1_img {
   width: 70%;
   padding: 2%;
   height: 250px;
   overflow: hidden;
 }
-/* line 272, ../sass/style.scss */
+/* line 273, ../sass/style.scss */
 .wineInfoPage_block1_img img {
   max-width: 100%;
 }
-/* line 276, ../sass/style.scss */
+/* line 277, ../sass/style.scss */
 .wineInfoPage_block1_like {
   width: 15%;
   bottom: 125px;
   position: relative;
 }
-/* line 286, ../sass/style.scss */
+/* line 287, ../sass/style.scss */
 .wineInfoPage_block3_comment {
   text-align: center;
 }
-/* line 288, ../sass/style.scss */
+/* line 289, ../sass/style.scss */
 .wineInfoPage_block3_comment img {
   width: 15%;
   display: inline-block;
   margin-left: 15px;
 }
-/* line 293, ../sass/style.scss */
+/* line 294, ../sass/style.scss */
 .wineInfoPage_block3_comment p {
   display: inline;
   margin: 15px;
   font-size: 15px;
 }
-/* line 300, ../sass/style.scss */
+/* line 301, ../sass/style.scss */
 .wineInfoPage_block3_commentInput input {
   width: 80%;
   border: 1px solid black;
   height: 40px;
   margin-left: 10px;
 }
-/* line 306, ../sass/style.scss */
+/* line 307, ../sass/style.scss */
 .wineInfoPage_block3_commentInput button {
   height: 40px;
   border: 0;
   color: white;
   background: #9f2223;
   border-radius: 10px;
+}
+
+/* line 321, ../sass/style.scss */
+.BigPage {
+  z-index: 1000000;
 }
